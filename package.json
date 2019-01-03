@@ -4,8 +4,10 @@
   "description": "",
   "main": "sketch.js",
   "dependencies": {
+    "bezier-easing": "^2.1.0",
     "canvas-sketch": "^0.2.0",
     "canvas-sketch-util": "^1.6.0",
+    "eases": "^1.0.8",
     "nice-color-palettes": "^2.0.0",
     "three": "^0.100.0"
   },

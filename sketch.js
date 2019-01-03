@@ -35,7 +35,7 @@ const sketch = () => {
         // count <= 1 ? 0.5 :
         const u = count <= 1 ? 0.5 : x / (count - 1);
         const v = count <= 1 ? 0.5 : y / (count - 1);
-        const radius = Math.abs(random.noise2D(u, v)) * 0.2;
+        const radius = Math.abs(random.noise2D(u, v)) * 0.02;
         points.push({
           color: random.pick(palette),
           //radius: random.gaussian() * 0.01,
@@ -73,10 +73,10 @@ const sketch = () => {
       const y = lerp(margin, height - margin, v);
 
       // POUR DES CERCLES
-      // context.beginPath();
-      // context.arc(x, y, radius * width, 0, Math.PI * 2, false);
-      // context.fillStyle = color;
-      // context.fill();
+      context.beginPath();
+      context.arc(x, y, radius * width, 0, Math.PI * 2, false);
+      context.fillStyle = color;
+      context.fill();
 
       // POUR CONTOURS CERCLES
       // context.strokeStyle = "black";
@@ -84,14 +84,14 @@ const sketch = () => {
       // context.stroke();
 
       // POUR TEXT
-      context.save();
-      context.fillStyle = color;
-      context.font = `${radius * width}px "Arial"`;
-      context.translate(x, y);
-      context.rotate(rotation);
-      context.fillText("=", 0, 0);
-      // context.fillText("=", x, y);
-      context.restore();
+      // context.save();
+      // context.fillStyle = color;
+      // context.font = `${radius * width}px "Arial"`;
+      // context.translate(x, y);
+      // context.rotate(rotation);
+      // context.fillText("=", 0, 0);
+      // // context.fillText("=", x, y);
+      // context.restore();
     });
     //_______________________________________________//
     //en fonction de unité
